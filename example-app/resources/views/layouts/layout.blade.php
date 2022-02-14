@@ -10,13 +10,19 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
-<body class="h-screen overflow-hidden flex items-center justify-center" style="background: #edf2f7;">
+<body class="" style="background: #edf2f7;">
+<nav
+    class="flex flex-row justify-between border-b
+				dark:border-gray-600 dark:text-gray-400 transition duration-500
+				ease-in-out">
+    <div class="flex">
+        @yield('topmenu_items')
+    </div>
 
-                        @yield('topmenu_items')
-
-            @yield('content')
-
-
+</nav>
+<div>
+    @yield('content')
+</div>
 </body>
 </html>
 
