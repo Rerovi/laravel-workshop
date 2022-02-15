@@ -11,6 +11,7 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="" style="background: #edf2f7;">
+<<<<<<< Updated upstream
 @yield('status')
 <nav
     class="flex flex-row justify-between border-b
@@ -20,8 +21,14 @@
         @yield('topmenu_items')
     </div>
 </nav>
+=======
+>>>>>>> Stashed changes
 <div>
-    @yield('content')
+@yield('status')
+</div><div>
+@yield('topmenu_items')
+</div>
+@yield('content')
 </div>
 </body>
 </html>

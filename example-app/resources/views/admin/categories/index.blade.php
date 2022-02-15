@@ -6,6 +6,7 @@
 @endsection
 
 @section('content')
+<<<<<<< Updated upstream
 @foreach($categories as $categorie)
     <tr>
         <td class="px-6 px-4 whitespace-nowrap text-sm font-medium text-gray-900">
@@ -13,6 +14,18 @@
         </td>
     </tr>
 @endforeach @endsection
+=======
+    <div class=" grid grid-cols-6 grid-rows-none gap-5">
+@foreach($categories as $category)
+    <div class="border-black-900 border-2">
+        <h1 class="text-center font-semibold">{{$category->name}}</h1>
+        <a href=" {{ route('categories.show', ['category' => $category->id]) }}">Details</a>
+        <h3 class="py-7 px-7">Edit</h3>
+        <h3 class="py-7 px-7">Remove</h3>
+    </div>
+@endforeach
+@endsection
+>>>>>>> Stashed changes
 
 @section('status')
     @if(session('status'))
