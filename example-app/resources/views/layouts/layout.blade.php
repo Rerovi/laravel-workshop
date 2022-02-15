@@ -12,6 +12,7 @@
 </head>
 <body class="" style="background: #edf2f7;">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @yield('status')
 <nav
     class="flex flex-row justify-between border-b
@@ -21,6 +22,8 @@
         @yield('topmenu_items')
     </div>
 </nav>
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 <div>

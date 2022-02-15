@@ -1,6 +1,9 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <?php
 =======
+=======
+>>>>>>> Stashed changes
 @extends('layouts.layout')
 
 @section('topmenu_items')
@@ -20,4 +23,7 @@
     </div>
 </div>
 @endsection
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

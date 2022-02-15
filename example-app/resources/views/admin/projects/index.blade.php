@@ -6,6 +6,7 @@
 @endsection
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 @section('content')
     @foreach($projects as $project)
         <tr>
@@ -33,6 +34,23 @@
 @section('content')
     <div class=" grid grid-cols-6 grid-rows-none gap-5">
     @foreach($projects as $project)
+=======
+{{--@section('content')--}}
+{{--    @foreach($projects as $project)--}}
+{{--        <tr>--}}
+{{--            <td class="px-6 px-4 whitespace-nowrap text-sm font-medium text-gray-900">--}}
+{{--                {{$project->id}}--}}
+{{--            </td>--}}
+{{--            <td class="px-6 px-4 whitespace-nowrap text-sm font-medium text-gray-900">--}}
+{{--                {{$project->name}}--}}
+{{--            </td>--}}
+{{--        </tr>--}}
+{{--    @endforeach @endsection--}}
+
+@section('content')
+    <div class=" grid grid-cols-6 grid-rows-none gap-5">
+    @foreach($projects as $project)
+>>>>>>> Stashed changes
         <div class="border-black-900 border-2">
             <h1 class="text-center font-semibold">{{$project->name}}</h1>
             <a href=" {{ route('projects.show', ['project' => $project->id]) }}">Details</a>
@@ -41,6 +59,9 @@
         </div>
     @endforeach
 @endsection
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 @section('status')
