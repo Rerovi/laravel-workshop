@@ -14,7 +14,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    { 
+    {
         $categories = Category::all();
         return view('admin.categories.index', compact('categories'));
     }
