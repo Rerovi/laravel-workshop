@@ -6,18 +6,6 @@
 @endsection
 
 @section('content')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-@foreach($categories as $categorie)
-    <tr>
-        <td class="px-6 px-4 whitespace-nowrap text-sm font-medium text-gray-900">
-            {{$categorie->name}}
-        </td>
-    </tr>
-@endforeach @endsection
-=======
-=======
->>>>>>> Stashed changes
     <div class=" grid grid-cols-6 grid-rows-none gap-5">
 @foreach($categories as $category)
     <div class="border-black-900 border-2">
@@ -28,10 +16,6 @@
     </div>
 @endforeach
 @endsection
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 @section('status')
     @if(session('status'))

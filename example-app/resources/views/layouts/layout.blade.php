@@ -11,21 +11,6 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 <body class="" style="background: #edf2f7;">
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-@yield('status')
-<nav
-    class="flex flex-row justify-between border-b
-				dark:border-gray-600 dark:text-gray-400 transition duration-500
-				ease-in-out">
-    <div class="flex">
-        @yield('topmenu_items')
-    </div>
-</nav>
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 <div>
 @yield('status')
 </div><div>

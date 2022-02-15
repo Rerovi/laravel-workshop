@@ -9,7 +9,6 @@
 
 @section('content')
 
-
 <form id="form" action="{{ route('projects.store')}}" method="POST">
     @csrf
     <label for="name">Name</label>
