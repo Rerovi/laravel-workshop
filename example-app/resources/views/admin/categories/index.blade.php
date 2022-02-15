@@ -12,8 +12,13 @@
             {{$categorie->name}}
         </td>
     </tr>
-@endforeach
-    @endsection
+@endforeach @endsection
+
+@section('status')
+    @if(session('status'))
+        <div class="bg-green-200 text-green-900 rounded-lg shadow-md p-6 pr-10 mb-8" style="">{{ session('status') }}</div>
+    @endif
+@endsection
 
 
 

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProjectStoreRequest;
+
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -35,11 +37,11 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProjectStoreRequest $request)
     {
         $project = Project::create(['name' => $request->name, 'description' => $request->description]);
 
-        return redirect()->route('projects.index');
+        return redirect()->route('projects.index')->with('status', 'Project aangemaakt!');
     }
 
     /**
