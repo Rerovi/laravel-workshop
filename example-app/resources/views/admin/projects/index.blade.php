@@ -9,8 +9,8 @@
     @foreach($projects as $project)
         <div class="border-black-900 border-2">
             <h1 class="text-center font-semibold">{{$project->name}}</h1>
-            <a href=" {{ route('projects.show', ['project' => $project->id]) }}">Details</a>
-            <h3 class="py-7 px-7">Edit</h3>
+            <a href=" {{ route('projects.show', ['project' => $project->id]) }}">Details</a><br>
+            <a href=" {{route('projects.edit', ['project' => $project->id]) }}">Edit</a>
             <h3 class="py-7 px-7">Remove</h3>
         </div>
     @endforeach

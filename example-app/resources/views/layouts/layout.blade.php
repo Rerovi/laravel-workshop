@@ -12,7 +12,6 @@
 </head>
 <body class="" style="background: #edf2f7;">
 <div>
-@yield('status')
 </div><div>
 @yield('topmenu_items')
 </div>
