@@ -10,8 +10,8 @@
         <div class="border-black-900 border-2">
             <h1 class="text-center font-semibold">{{$project->name}}</h1>
             <a href=" {{ route('projects.show', ['project' => $project->id]) }}">Details</a><br>
-            <a href=" {{route('projects.edit', ['project' => $project->id]) }}">Edit</a>
-            <h3 class="py-7 px-7">Remove</h3>
+            <a href=" {{ route('projects.edit', ['project' => $project->id]) }}">Edit</a>
+            <a href=" {{ route('projects.delete', ['project' => $project->id]) }}">Delete</a>
         </div>
     @endforeach
 @endsection

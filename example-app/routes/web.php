@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\ProjectController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,14 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layouts.layout');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('/admin/categories', \App\Http\Controllers\Admin\CategoryController::class);
-Route::resource('/admin/projects', \App\Http\Controllers\Admin\ProjectController::class);
+Route::get('admin/categories/{category}/delete', [CategoryController::class, 'delete'])
+    ->name('categories.delete');
+Route::resource('/admin/categories', CategoryController::class);
+
+Route::get('admin/projects/{project}/delete', [ProjectController::class, 'delete'])
+    ->name('projects.delete');
+Route::resource('/admin/projects', ProjectController::class);
 
 require __DIR__.'/auth.php';

@@ -73,6 +73,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
+    public function delete(Category $category) {
+
+        return view('admin.categories.delete', compact('category'));
+    }
+
     public function update(CategoryUpdateRequest $request, Category $category)
     {
         $category->name = $request->name;
@@ -88,6 +93,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
-        //
+        $category->delete();
+        return redirect()->route('categories.index')->with('status', 'Category verwijdert!');
     }
 }

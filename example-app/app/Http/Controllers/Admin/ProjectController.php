@@ -80,6 +80,9 @@ class ProjectController extends Controller
         $project->save();
         return redirect()->route('projects.index')->with('status', 'Project ge-update!');
     }
+    public function delete(Project $project) {
+        return view('admin.projects.delete', compact('project'));
+    }
 
     /**
      * Remove the specified resource from storage.
@@ -89,6 +92,7 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+        return redirect()->route('projects.index')->with('status', 'Project verwijdert!');
     }
 }
