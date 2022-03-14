@@ -23,12 +23,16 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('admin/categories/{category}/delete', [CategoryController::class, 'delete'])
-    ->name('categories.delete');
-Route::resource('/admin/categories', CategoryController::class);
+Route::group(['middleware' => ['role:student|teacher|admin']], function () {
+    Route::get('admin/projects/{project}/delete', [ProjectController::class, 'delete'])
+        ->name('projects.delete');
+    Route::resource('/admin/projects', ProjectController::class);
+});
 
-Route::get('admin/projects/{project}/delete', [ProjectController::class, 'delete'])
-    ->name('projects.delete');
-Route::resource('/admin/projects', ProjectController::class);
+Route::group(['middleware' => ['role:customer|sales|admin']], function () {
+    Route::get('admin/categories/{category}/delete', [CategoryController::class, 'delete'])
+        ->name('categories.delete');
+    Route::resource('/admin/categories', CategoryController::class);
+});
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

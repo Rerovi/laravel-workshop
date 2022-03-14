@@ -1,6 +1,14 @@
 @extends('layouts.layout')
 
 @section('topmenu_items')
+    @guest
+        <h3>Guest</h3>
+        <a href="{{route('login')}}">Login</a>
+        <a href="{{route('register')}}">Register</a>
+    @else
+        <h3>{{ Auth::user()->name }}</h3>
+    @endguest
+    <a href="{{route('login')}}">Logout</a>
     <a href="{{route('projects.index')}}"><button>Index</button></a>
     <a href="{{route('projects.create')}}"><button>Create</button></a>
 @endsection

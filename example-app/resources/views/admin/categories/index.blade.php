@@ -1,8 +1,18 @@
 @extends('layouts.layout')
 
 @section('topmenu_items')
-    <a href="{{route('categories.index')}}"><button>Index</button></a>
-    <a href="{{route('categories.create')}}"><button>Create</button></a>
+
+        @guest
+            <h3>Guest</h3>
+
+            <a href="{{base_path('login')}}">Login</a>
+            <a href="{{route('register')}}">Register</a>
+        @else
+            <h3>{{ Auth::user()->name }}</h3>
+        @endguest
+        <a href="{{route('login')}}">Logout</a>
+    <a href="{{route('categories.index')}}">Index</a>
+    <a href="{{route('categories.create')}}">Create</a>
 @endsection
 
 @section('content')
